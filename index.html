@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+  <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=%%GA4_ID%%"></script>
+  <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js',new Date());
+    gtag('config','%%GA4_ID%%');
+  </script>
+
+  <title>比特幣博彩Provably Fair算法深度技術驗證 | 加密貨幣遊戲研究站</title>
+  <meta name="description" content="深度評測區塊鏈博彩平台的Provably Fair公平性機制與智能合約資金安全，以密碼學視角審查遊戲公平性。">
+  <link rel="canonical" href="https://cryptocurrency-game.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="比特幣博彩Provably Fair算法深度技術驗證 | 加密貨幣遊戲研究站">
+  <meta property="og:description" content="深度評測區塊鏈博彩平台的Provably Fair公平性機制與智能合約資金安全，以密碼學視角審查遊戲公平性。">
+  <meta property="og:url" content="https://cryptocurrency-game.com/">
+  <meta property="og:image" content="https://cryptocurrency-game.com/og-image.png">
+  <meta property="og:locale" content="zh_HK">
+  <meta property="og:site_name" content="加密貨幣遊戲研究站">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="比特幣博彩Provably Fair算法深度技術驗證 | 加密貨幣遊戲研究站">
+  <meta name="twitter:description" content="深度評測區塊鏈博彩平台的Provably Fair公平性機制與智能合約資金安全，以密碼學視角審查遊戲公平性。">
+  <meta name="twitter:image" content="https://cryptocurrency-game.com/og-image.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://cryptocurrency-game.com/#website",
+        "url": "https://cryptocurrency-game.com/",
+        "name": "加密貨幣遊戲研究站",
+        "publisher": { "@id": "https://cryptocurrency-game.com/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://cryptocurrency-game.com/#organization",
+        "name": "加密貨幣遊戲研究站",
+        "url": "https://cryptocurrency-game.com/",
+        "logo": { "@type": "ImageObject", "url": "https://cryptocurrency-game.com/LOGO.svg" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Provably Fair算法如何驗證博彩公平性？",
+            "acceptedAnswer": { "@type": "Answer", "text": "Provably Fair使用密碼學雜湊函數：賭場預先提供Server Seed的雜湊值，玩家提供Client Seed，兩者結合生成遊戲結果。遊戲結束後，賭場揭露原始Server Seed，玩家可用相同算法自行計算結果是否一致。這個過程讓玩家能在不信任賭場的前提下，數學上驗證結果未被操控。" }
+          },
+          {
+            "@type": "Question",
+            "name": "在無KYC加密賭場玩有什麼風險？",
+            "acceptedAnswer": { "@type": "Answer", "text": "無KYC平台的主要風險：（1）監管保護缺失——出現爭議時幾乎無法透過監管機構求助；（2）出金風險——大額贏利後可能被要求補KYC甚至帳號被凍結；（3）反洗錢（AML）問題——部分無KYC平台存在被執法機構針對的法律風險。建議只存入可承受損失的金額。" }
+          },
+          {
+            "@type": "Question",
+            "name": "BTC、ETH和Monero在博彩提款上有什麼分別？",
+            "acceptedAnswer": { "@type": "Answer", "text": "三種幣種的博彩應用特性：BTC最廣泛接受但確認時間較慢（30-60分鐘，需3-6個確認），適合大額交易；ETH速度較快（5-15分鐘），Gas費用波動大；Monero（XMR）提供真正的交易隱私，但接受平台較少，部分交易所已停止支持，出金流動性較低。" }
+          },
+          {
+            "@type": "Question",
+            "name": "智能合約賭場比傳統平台更安全嗎？",
+            "acceptedAnswer": { "@type": "Answer", "text": "智能合約賭場的優勢是代碼公開透明，資金由合約自動管理，無需信任平台運營者。但風險包括：智能合約代碼漏洞（歷史上已有多起重大黑客攻擊）、Rug Pull（開發者捲款跑路）、以及缺乏監管保護。安全性取決於合約是否經過知名審計機構審查。" }
+          },
+          {
+            "@type": "Question",
+            "name": "加密貨幣博彩所得需要報稅嗎？",
+            "acceptedAnswer": { "@type": "Answer", "text": "稅務處理因司法管轄區而異：香港目前對個人的資本利得不徵收資本利得稅，加密資產收益在多數情況下不需申報。但若屬常規交易活動，可能被視為商業收入而需報稅。加密博彩的稅務灰色地帶複雜，建議就個人情況諮詢稅務專業人士。本文不構成法律或稅務意見。" }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="style-color.css">
+  <link rel="stylesheet" href="style-base.css">
+  <link rel="stylesheet" href="style-layout.css">
+</head>
+<body>
+
+
+<!-- ── HEADER ──────────────────────────────────────────────── -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="https://cryptocurrency-game.com/" class="header-logo">
+      <img src="/LOGO.svg" alt="加密貨幣遊戲研究站 logo" onerror="this.style.display='none'">
+      加密貨幣遊戲研究站
+    </a>
+    <nav class="header-nav" aria-label="主導覽">
+      <a href="https://cryptocurrency-game.com/blog.html" class="nav-link">攻略中心</a>
+      <a href="https://cryptocurrency-game.com/about.html" class="nav-link">關於我們</a>
+    </nav>
+    <a href="https://businessdirectory-uk.com/utm_source=crypto-play-index&utm_medium=referral&utm_campaign=satellite-network&utm_content=header-cta" class="btn btn-primary btn-sm" target="_blank" rel="noopener">立即前往</a>
+  </div>
+</header>
+
+<!-- ── HERO C ── -->
+<section class="hero-c" aria-label="主頁橫幅">
+  <div class="hero-c-content">
+    <div class="hero-c-badge">
+      <span class="live-dot"></span>
+      加密賭博 權威分析平台
+    </div>
+    <h1 class="hero-c-title">
+      專業數據<span class="accent">分析</span><br>助你掌握先機
+    </h1>
+    <p class="hero-c-subtitle">
+      由資深分析師 袁嘉樂 主理，每日更新深度數據分析與策略指南。
+    </p>
+
+    <!-- Stats Row -->
+    <div class="hero-c-stats">
+      <div class="hero-c-stat">
+        <div class="hero-c-stat-num">100+</div>
+        <div class="hero-c-stat-label">深度文章</div>
+      </div>
+      <div class="hero-c-stat">
+        <div class="hero-c-stat-num">每日</div>
+        <div class="hero-c-stat-label">更新資訊</div>
+      </div>
+      <div class="hero-c-stat">
+        <div class="hero-c-stat-num">15+</div>
+        <div class="hero-c-stat-label">年行業經驗</div>
+      </div>
+    </div>
+
+    <div class="hero-c-cta">
+      <a href="https://businessdirectory-uk.com/utm_source=crypto-play-index&utm_medium=referral&utm_campaign=satellite-network&utm_content=hero-cta" class="btn btn-primary btn-lg" target="_blank" rel="noopener">前往官方平台</a>
+      <a href="https://cryptocurrency-game.com/blog.html" class="btn btn-outline btn-lg" style="color:var(--clr-text-inv);border-color:var(--clr-border-dark);">閱讀攻略</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRENDING BAR ─────────────────────────────────────────── -->
+<div class="trending-bar" aria-label="熱門話題">
+  <div class="trending-bar-inner">
+    <span class="trending-label">熱門話題</span>
+    <div class="trending-tags" id="trending-tags">
+      <a href="https://cryptocurrency-game.com/blog.html" class="trending-tag">攻略技巧</a>
+      <a href="https://cryptocurrency-game.com/blog.html" class="trending-tag">數據分析</a>
+      <a href="https://cryptocurrency-game.com/blog.html" class="trending-tag">新手入門</a>
+      <a href="https://cryptocurrency-game.com/blog.html" class="trending-tag">策略指南</a>
+      <a href="https://cryptocurrency-game.com/blog.html" class="trending-tag">最新資訊</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── GAME CATEGORIES ──────────────────────────────────────── -->
+<section class="section bg-alt">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">遊戲 <span class="accent">分類指南</span></h2>
+    </div>
+    <div class="featured-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-meta"><span class="tag tag-1">Provably Fair驗證</span></div>
+          <p class="card-excerpt">深度解析Provably Fair算法的密碼學原理，提供各平台公平性驗證方法的技術審查報告。</p>
+          <a href="https://cryptocurrency-game.com/blog.html" class="card-footer" style="color:var(--clr-accent);font-weight:700;font-size:13px;text-decoration:none;">查看攻略 →</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="card-meta"><span class="tag tag-2">無KYC平台比較</span></div>
+          <p class="card-excerpt">系統比較BTC、ETH、Monero在各大無KYC加密博彩場的存提款差異，評估真實匿名性保護效果。</p>
+          <a href="https://cryptocurrency-game.com/blog.html" class="card-footer" style="color:var(--clr-accent);font-weight:700;font-size:13px;text-decoration:none;">查看攻略 →</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="card-meta"><span class="tag tag-3">智能合約賭場</span></div>
+          <p class="card-excerpt">評測基於以太坊與Solana等區塊鏈的去中心化賭場的資金安全機制，拆解智能合約漏洞風險案例。</p>
+          <a href="https://cryptocurrency-game.com/blog.html" class="card-footer" style="color:var(--clr-accent);font-weight:700;font-size:13px;text-decoration:none;">查看攻略 →</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="card-meta"><span class="tag tag-4">加密存提攻略</span></div>
+          <p class="card-excerpt">實測主流加密貨幣在各大博彩平台的存款速度、提款限額與鏈上確認時效，提供幣種選擇指南。</p>
+          <a href="https://cryptocurrency-game.com/blog.html" class="card-footer" style="color:var(--clr-accent);font-weight:700;font-size:13px;text-decoration:none;">查看攻略 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURED ARTICLES ────────────────────────────────────── -->
+<section class="featured-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">最新 <span class="accent">攻略文章</span></h2>
+      <a href="https://cryptocurrency-game.com/blog.html" class="btn btn-outline btn-sm">查看全部</a>
+    </div>
+    <div class="featured-grid" id="articles-grid">
+      <!-- JS rendered -->
+<!-- BLOG_INJECT_START -->
+<!-- BLOG_INJECT_END -->
+    </div>
+  </div>
+</section>
+
+<!-- ── BENEFITS ──────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">為什麼選擇 <span class="accent">加密貨幣遊戲研究站</span></h2>
+    </div>
+    <div class="featured-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-meta"><span class="tag tag-1">Provably Fair技術解析</span></div>
+          <p class="card-excerpt">以密碼學角度解讀Provably Fair算法，提供可操作的驗證步驟，讓玩家能自行核實每局結果的公平性。</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="card-meta"><span class="tag tag-2">匿名性實際評估</span></div>
+          <p class="card-excerpt">不依賴平台聲稱，通過實際存提款測試評估各平台的真實匿名保護程度，識別「假匿名」平台。</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="card-meta"><span class="tag tag-3">智能合約安全審查</span></div>
+          <p class="card-excerpt">分析去中心化賭場的智能合約代碼安全性，整理歷史漏洞案例，幫助玩家識別高風險平台。</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="card-meta"><span class="tag tag-4">幣種效率比較</span></div>
+          <p class="card-excerpt">實測BTC、ETH、USDT、Monero等主流幣種在博彩平台的存提款速度與手續費，提供成本效益比較。</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="card-meta"><span class="tag tag-5">監管合規追蹤</span></div>
+          <p class="card-excerpt">追蹤各司法管轄區對加密博彩的最新監管動態，評估平台的合規風險與可持續運營能力。</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="card-meta"><span class="tag tag-1">技術中立立場</span></div>
+          <p class="card-excerpt">本站評測不偏向特定幣種或區塊鏈生態，以技術中立角度提供客觀的加密博彩平台分析。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MAIN CONTENT + SIDEBAR ───────────────────────────────── -->
+<section class="section bg-alt">
+  <div class="container">
+    <div class="content-with-sidebar">
+
+      <!-- Main: Recent Articles -->
+      <div>
+        <div class="section-divider">
+          <h2 class="section-title">近期文章</h2>
+        </div>
+        <div id="recent-articles">
+          <div class="article-row">
+            <div class="article-row-img" style="background:var(--clr-bg);"></div>
+            <div>
+              <a href="https://cryptocurrency-game.com/blog.html" class="article-row-title">文章持續更新中，敬請期待更多專業分析...</a>
+              <div class="article-row-date">最新更新</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:var(--space-6);text-align:center;">
+          <a href="https://cryptocurrency-game.com/blog.html" class="btn btn-outline">查看所有文章</a>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside>
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-title">關於作者</div>
+          <div class="author-byline" style="flex-direction:column;align-items:flex-start;gap:var(--space-3);">
+            <img src="https://api.dicebear.com/9.x/notionists/png?seed=yuen-ka-lok&size=200&backgroundColor=fff7ed" alt="袁嘉樂" style="width:64px;height:64px;border-radius:50%;border:3px solid var(--clr-accent);display:block;object-fit:cover;margin-bottom:var(--space-2);">
+            <div>
+              <div class="author-name" style="font-size:16px;margin-bottom:4px;">袁嘉樂</div>
+              <div style="font-size:13px;color:var(--clr-accent);font-weight:700;">區塊鏈博彩生態研究員</div>
+            </div>
+            <p style="font-size:13px;color:var(--clr-text-muted);line-height:1.6;">從事區塊鏈遊戲與去中心化博彩協議研究逾8年，深度追蹤DeFi博彩平台的智能合約透明度、NFT遊戲資產評估及Web3平台安全審計。研究報告獲多家加密貨幣媒體及博彩監管機構參考引用。</p>
+            <a href="https://cryptocurrency-game.com/about.html" class="btn btn-ghost btn-sm">了解更多</a>
+          </div>
+        </div>
+
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-title">熱門標籤</div>
+          <div style="display:flex;flex-wrap:wrap;gap:var(--space-2);">
+            <a href="https://cryptocurrency-game.com/blog.html" class="tag tag-outline" style="margin-bottom:4px;">攻略技巧</a>
+            <a href="https://cryptocurrency-game.com/blog.html" class="tag tag-outline" style="margin-bottom:4px;">數據分析</a>
+            <a href="https://cryptocurrency-game.com/blog.html" class="tag tag-outline" style="margin-bottom:4px;">策略指南</a>
+            <a href="https://cryptocurrency-game.com/blog.html" class="tag tag-outline" style="margin-bottom:4px;">新手入門</a>
+          </div>
+        </div>
+
+        <div class="sidebar-widget" style="background:var(--clr-bg-dark);border-color:var(--clr-border-dark);">
+          <div class="sidebar-widget-title">立即前往</div>
+          <p style="font-size:13px;color:var(--clr-text-inv-muted);margin-bottom:var(--space-4);line-height:1.6;">取得最新優惠及資訊，立即前往官方平台。</p>
+          <a href="https://businessdirectory-uk.com/utm_source=crypto-play-index&utm_medium=referral&utm_campaign=satellite-network&utm_content=sidebar-cta" class="btn btn-primary" target="_blank" rel="noopener" style="width:100%;justify-content:center;">前往官網</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ──────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container" style="max-width:720px;">
+    <h2 class="section-title">常見問題</h2>
+    <div class="faq-section">
+      <div class="faq-item">
+        <div class="faq-q">Provably Fair算法如何驗證博彩公平性？</div>
+        <div class="faq-a">Provably Fair使用密碼學雜湊函數：賭場預先提供Server Seed的雜湊值，玩家提供Client Seed，兩者結合生成遊戲結果。遊戲結束後，賭場揭露原始Server Seed，玩家可用相同算法自行計算結果是否一致。這個過程讓玩家能在不信任賭場的前提下，數學上驗證結果未被操控。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">在無KYC加密賭場玩有什麼風險？</div>
+        <div class="faq-a">無KYC平台的主要風險：（1）監管保護缺失——出現爭議時幾乎無法透過監管機構求助；（2）出金風險——大額贏利後可能被要求補KYC甚至帳號被凍結；（3）反洗錢（AML）問題——部分無KYC平台存在被執法機構針對的法律風險。建議只存入可承受損失的金額。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">BTC、ETH和Monero在博彩提款上有什麼分別？</div>
+        <div class="faq-a">三種幣種的博彩應用特性：BTC最廣泛接受但確認時間較慢（30-60分鐘，需3-6個確認），適合大額交易；ETH速度較快（5-15分鐘），Gas費用波動大；Monero（XMR）提供真正的交易隱私，但接受平台較少，部分交易所已停止支持，出金流動性較低。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">智能合約賭場比傳統平台更安全嗎？</div>
+        <div class="faq-a">智能合約賭場的優勢是代碼公開透明，資金由合約自動管理，無需信任平台運營者。但風險包括：智能合約代碼漏洞（歷史上已有多起重大黑客攻擊）、Rug Pull（開發者捲款跑路）、以及缺乏監管保護。安全性取決於合約是否經過知名審計機構審查。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">加密貨幣博彩所得需要報稅嗎？</div>
+        <div class="faq-a">稅務處理因司法管轄區而異：香港目前對個人的資本利得不徵收資本利得稅，加密資產收益在多數情況下不需申報。但若屬常規交易活動，可能被視為商業收入而需報稅。加密博彩的稅務灰色地帶複雜，建議就個人情況諮詢稅務專業人士。本文不構成法律或稅務意見。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BANNER ────────────────────────────────────────────── -->
+<section class="section container">
+  <div class="cta-banner">
+    <h2>準備好了嗎？</h2>
+    <p>立即前往官方平台，獲取最新優惠與資訊。</p>
+    <a href="https://businessdirectory-uk.com/utm_source=crypto-play-index&utm_medium=referral&utm_campaign=satellite-network&utm_content=banner-cta" class="btn btn-primary btn-lg" target="_blank" rel="noopener">立即前往</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">加密貨幣遊戲研究站</div>
+        <p class="footer-tagline">深度評測區塊鏈博彩平台的Provably Fair公平性機制與智能合約資金安全，以密碼學視角審查遊戲公平性。</p>
+      </div>
+      <div>
+        <div class="footer-col-title">內容分類</div>
+        <a href="https://cryptocurrency-game.com/blog.html" class="footer-link">攻略中心</a>
+        <a href="https://cryptocurrency-game.com/blog.html" class="footer-link">數據分析</a>
+        <a href="https://cryptocurrency-game.com/blog.html" class="footer-link">新手指南</a>
+      </div>
+      <div>
+        <div class="footer-col-title">關於</div>
+        <a href="https://cryptocurrency-game.com/about.html" class="footer-link">關於我們</a>
+        <a href="https://businessdirectory-uk.com/utm_source=crypto-play-index&utm_medium=referral&utm_campaign=satellite-network&utm_content=footer-link" class="footer-link" target="_blank" rel="noopener">官方平台</a>
+      </div>
+      <div>
+        <div class="footer-col-title">法律聲明</div>
+        <a href="https://cryptocurrency-game.com/privacy.html" class="footer-link">私隱政策</a>
+        <a href="https://cryptocurrency-game.com/terms.html" class="footer-link">使用條款</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="footer-year">2026</span> 加密貨幣遊戲研究站. 所有內容僅供參考。</span>
+      <span>本站為獨立媒體，不代表任何平台立場。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+  // Load recent articles from blog-recent.json
+  fetch('/data/blog-recent.json')
+    .then(r => r.ok ? r.json() : null)
+    .then(data => {
+      if (!data || !data.articles || !data.articles.length) return;
+      const grid = document.getElementById('articles-grid');
+      const recent = document.getElementById('recent-articles');
+      const articles = data.articles.slice(0, 6);
+      if (articles.length >= 3) {
+        grid.innerHTML = articles.slice(0,3).map((a, i) => `
+          <div class="card">
+            <img class="card-img" src="${a.imageUrl || ''}" alt="${a.title}" loading="lazy"
+              onerror="this.style.background='var(--clr-bg-alt)';this.src=''">
+            <div class="card-body">
+              <div class="card-meta"><span class="tag tag-${(i%5)+1}">${a.category || '攻略'}</span></div>
+              <a href="/blog/${a.slug}" class="card-title">${a.title}</a>
+              <p class="card-excerpt">${a.excerpt || a.metaDesc || ''}</p>
+              <div class="card-footer">
+                <span>${a.date || ''}</span>
+                <a href="/blog/${a.slug}" style="color:var(--clr-accent);font-weight:700;font-size:12px;">閱讀全文 →</a>
+              </div>
+            </div>
+          </div>`).join('');
+      }
+      if (articles.length) {
+        recent.innerHTML = articles.map((a, i) => `
+          <div class="article-row">
+            <img class="article-row-img" src="${a.imageUrl || ''}" alt="${a.title}" loading="lazy"
+              onerror="this.style.background='var(--clr-bg-alt)';this.src=''">
+            <div>
+              <a href="/blog/${a.slug}" class="article-row-title">${a.title}</a>
+              <div class="article-row-date">${a.date || ''}</div>
+            </div>
+          </div>`).join('');
+        if (articles[0]) {
+          document.getElementById('hero-title').textContent = articles[0].title;
+          document.getElementById('hero-excerpt').textContent = articles[0].excerpt || articles[0].metaDesc || '';
+          if (articles[0].category) document.getElementById('hero-cat').textContent = articles[0].category;
+          if (articles[0].date) document.getElementById('hero-date').textContent = articles[0].date;
+        }
+      }
+    }).catch(() => {});
+</script>
+</body>
+</html>
