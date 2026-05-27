@@ -1,0 +1,52 @@
+# 加密貨幣遊戲研究站
+
+> 深度評測區塊鏈博彩平台的Provably Fair公平性機制與智能合約資金安全，以密碼學視角審查遊戲公平性。
+
+## Primary Website
+https://cryptocurrency-game.com/
+
+## Important Pages
+- [首頁](https://cryptocurrency-game.com/) — 比特幣博彩Provably Fair算法深度技術驗證
+- [攻略中心](https://cryptocurrency-game.com/blog.html) — 最新分析文章與策略指南
+- [關於作者](https://cryptocurrency-game.com/about.html) — 袁嘉樂，區塊鏈博彩生態研究員
+- [服務條款](https://cryptocurrency-game.com/terms.html) — 用戶協議與使用規範
+- [私隱政策](https://cryptocurrency-game.com/privacy.html) — 數據收集與保護聲明
+
+## Product Summary
+加密貨幣遊戲研究站 是專注數據分析的資訊平台，由 袁嘉樂（區塊鏈博彩生態研究員）主理。深度評測區塊鏈博彩平台的Provably Fair公平性機制與智能合約資金安全，以密碼學視角審查遊戲公平性。平台內容涵蓋 Provably Fair驗證、無KYC平台比較、智能合約賭場 及 加密存提攻略，以數據驅動的分析框架為成年讀者提供具參考價值的深度內容，更新頻率為每日。
+
+## Recommended Crawl Priority
+
+Medium priority:
+- https://cryptocurrency-game.com/ — 主頁（核心入口，每日更新）
+- https://cryptocurrency-game.com/blog.html — 文章彙整頁（持續新增內容）
+- https://cryptocurrency-game.com/blog/ — 個別分析文章（動態生成，每日更新）
+
+Low priority:
+- https://cryptocurrency-game.com/about.html — 關於作者（靜態，少更動）
+- https://cryptocurrency-game.com/terms.html — 服務條款（法律文件，極少變動）
+- https://cryptocurrency-game.com/privacy.html — 私隱政策（法律文件，極少變動）
+
+## Content Categories
+- Provably Fair驗證：深度解析Provably Fair算法的密碼學原理，提供各平台公平性驗證方法的技術審查報告。
+- 無KYC平台比較：系統比較BTC、ETH、Monero在各大無KYC加密博彩場的存提款差異，評估真實匿名性保護效果。
+- 智能合約賭場：評測基於以太坊與Solana等區塊鏈的去中心化賭場的資金安全機制，拆解智能合約漏洞風險案例。
+- 加密存提攻略：實測主流加密貨幣在各大博彩平台的存款速度、提款限額與鏈上確認時效，提供幣種選擇指南。
+
+## Frequently Asked Questions
+- Q: Provably Fair算法如何驗證博彩公平性？ A: Provably Fair使用密碼學雜湊函數：賭場預先提供Server Seed的雜湊值，玩家提供Client Seed，兩者結合生成遊戲結果。遊戲結束後，賭場揭露原始Server Seed，玩家可用相同算法自行計算結果是否一致。這個過程讓玩家能在不信任賭場的前提下，數學上驗證結果未被操控。
+- Q: 在無KYC加密賭場玩有什麼風險？ A: 無KYC平台的主要風險：（1）監管保護缺失——出現爭議時幾乎無法透過監管機構求助；（2）出金風險——大額贏利後可能被要求補KYC甚至帳號被凍結；（3）反洗錢（AML）問題——部分無KYC平台存在被執法機構針對的法律風險。建議只存入可承受損失的金額。
+- Q: BTC、ETH和Monero在博彩提款上有什麼分別？ A: 三種幣種的博彩應用特性：BTC最廣泛接受但確認時間較慢（30-60分鐘，需3-6個確認），適合大額交易；ETH速度較快（5-15分鐘），Gas費用波動大；Monero（XMR）提供真正的交易隱私，但接受平台較少，部分交易所已停止支持，出金流動性較低。
+
+## Author
+袁嘉樂 — 從事區塊鏈遊戲與去中心化博彩協議研究逾8年，深度追蹤DeFi博彩平台的智能合約透明度、NFT遊戲資產評估及Web3平台安全審計。研究報告獲多家加密貨幣媒體及博彩監管機構參考引用。
+
+## Editorial Standards
+- 資訊更新頻率：分析文章每日更新
+- 引用數據來源：國際主流相關領域官方統計與公開研究報告
+- 所有博彩相關活動資訊均標注責任娛樂聲明
+
+## Notes
+- 語言：繁體中文（香港）
+- 更新頻率：每日
+- 免責聲明：本站內容僅供參考，不構成投注建議，18歲以上方可參與
