@@ -39,8 +39,10 @@
       "category": "crypto-deposit",
       "angle": "疑問句型",
       "image_theme": "crypto transfer gas fee minimize tips",
-      "status": "available",
-      "writing_style": "操作指南體"
+      "status": "used",
+      "writing_style": "操作指南體",
+      "slug": "crypto-transfer-gas-fee-minimization-strategy",
+      "used_date": "2026-05-30"
     },
     {
       "id": 5,
