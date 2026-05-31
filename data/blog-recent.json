@@ -1,6 +1,14 @@
 {
   "articles": [
     {
+      "slug": "hong-kong-crypto-betting-payment-shift",
+      "title": "加密貨幣存款取代銀行轉帳：香港博彩用戶支付偏好轉移之成因分析",
+      "category": "undefined",
+      "date": "2026-05-31",
+      "excerpt": "我最近發現身邊好多香港朋友玩網上博彩都轉用加密貨幣，究竟背後有咩原因？真係好奇想知。",
+      "imageUrl": "https://pixabay.com/get/g018e71567cd65939c76fe20d4a5f7209fffb4a0082c7f0ed63e8ae2e1f411d956cf8ea7160e0e23d9d9d377b803f907a03440e93e7cc2bfe42efee1f3bdf4b59_640.jpg"
+    },
+    {
       "slug": "crypto-deposit-fees-comparison",
       "title": "博彩平台加密貨幣存款手續費比較研究：各主流幣種費率差異分析",
       "category": "undefined",
@@ -15,14 +23,6 @@
       "date": "2026-05-30",
       "excerpt": "講起加密貨幣轉帳，最頭痛莫過於啲Gas費，有時貴到肉赤！我哋一齊研究下點樣可以聰明地慳錢啦。",
       "imageUrl": "https://pixabay.com/get/ge23f0ad692b9305d8a8d2eac2590bed322a16c21920c4da955185df68fbc0f5d4cfc0bc400b0321a2b921aa1be6d2947dcdae87ac8c70faf88921a9e25e41c38_640.jpg"
-    },
-    {
-      "slug": "bitcoin-usdt-deposit-security-comparison",
-      "title": "比特幣存款與USDT存款安全性比較：加密貨幣博彩存款風險深度解析",
-      "category": "undefined",
-      "date": "2026-05-30",
-      "excerpt": "講到網上博彩，加密貨幣存款係大趨勢，但我哋點樣知比特幣同USDT邊個更安全？我真係好想知！",
-      "imageUrl": "https://pixabay.com/get/g8eb8177dfe43abeb5a5064d3d9e729ddd0b3e0b7b817e39e1d247429e98fdbc1f3a758a6cd81547c9d4813345a6910b7e2b3547f69865ee61217f0a82e7666d6_640.jpg"
     }
   ]
 }
