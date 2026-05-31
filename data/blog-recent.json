@@ -1,6 +1,14 @@
 {
   "articles": [
     {
+      "slug": "ethereum-gambling-platform-review",
+      "title": "支援以太坊入款之博彩平台深度評析與推薦指南",
+      "category": "undefined",
+      "date": "2026-05-31",
+      "excerpt": "玩開加密貨幣嘅我，最怕就係搵到啲唔穩陣嘅博彩平台，所以今次決定同大家拆解以太坊平台嘅安全秘笈！",
+      "imageUrl": "https://pixabay.com/get/gc4baa71437c8b84d6f719c81c31352829ccf68813e601af2d95dcdb114b0626af7e6d14d09b6431c718bd8d31cdaa8c83e71ca62c67dfc165c2a3c8a6108ce8c_640.jpg"
+    },
+    {
       "slug": "hong-kong-crypto-betting-payment-shift",
       "title": "加密貨幣存款取代銀行轉帳：香港博彩用戶支付偏好轉移之成因分析",
       "category": "undefined",
@@ -15,14 +23,6 @@
       "date": "2026-05-31",
       "excerpt": "講到網上博彩，加密貨幣入金真係又快又方便，但我哋都想知邊個平台收費最合理，點樣可以慳到盡，玩得更精明！",
       "imageUrl": "https://pixabay.com/get/g73ee1c4bd28e377c59d547e04efc622c8072e0194ecc444ccf39ecb2d37b3e1a9e23eca7b0b11a9f812057b0830bab2475ff7f6f08ab2fb3ec949d30b3160a61_640.jpg"
-    },
-    {
-      "slug": "crypto-transfer-gas-fee-minimization-strategy",
-      "title": "加密貨幣轉帳Gas費用最小化策略：技術機制與優化方法研究",
-      "category": "undefined",
-      "date": "2026-05-30",
-      "excerpt": "講起加密貨幣轉帳，最頭痛莫過於啲Gas費，有時貴到肉赤！我哋一齊研究下點樣可以聰明地慳錢啦。",
-      "imageUrl": "https://pixabay.com/get/ge23f0ad692b9305d8a8d2eac2590bed322a16c21920c4da955185df68fbc0f5d4cfc0bc400b0321a2b921aa1be6d2947dcdae87ac8c70faf88921a9e25e41c38_640.jpg"
     }
   ]
 }
