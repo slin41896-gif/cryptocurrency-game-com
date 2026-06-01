@@ -94,8 +94,10 @@
       "category": "crypto-deposit",
       "angle": "數據比較型",
       "image_theme": "casino crypto minimum deposit amount comparison",
-      "status": "available",
-      "writing_style": "統計分析體"
+      "status": "used",
+      "writing_style": "統計分析體",
+      "slug": "crypto-deposit-minimum-comparison",
+      "used_date": "2026-06-01"
     },
     {
       "id": 10,
