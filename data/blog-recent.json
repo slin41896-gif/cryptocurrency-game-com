@@ -1,6 +1,14 @@
 {
   "articles": [
     {
+      "slug": "crypto-deposit-minimum-comparison",
+      "title": "《博彩平台加密貨幣存款最低金額標準比較研究》",
+      "category": "undefined",
+      "date": "2026-06-01",
+      "excerpt": "講到網上博彩，加密貨幣存款真係又快又方便！但係，到底邊個平台嘅最低存款額最佛心呢？我哋一齊揭曉！",
+      "imageUrl": "https://pixabay.com/get/g29df5df5d1c26e4e7e6287b2f4971fa57d850d8b35f89736738bd034f8c8ff65bb8e2508b227f7f93aad483c4ad16e68_640.jpg"
+    },
+    {
       "slug": "crypto-gambling-anonymity-tracking-study",
       "title": "加密貨幣入款博彩的匿名性評估與監管追蹤能力研究",
       "category": "undefined",
@@ -15,14 +23,6 @@
       "date": "2026-05-31",
       "excerpt": "玩開加密貨幣嘅我，最怕就係搵到啲唔穩陣嘅博彩平台，所以今次決定同大家拆解以太坊平台嘅安全秘笈！",
       "imageUrl": "https://pixabay.com/get/gc4baa71437c8b84d6f719c81c31352829ccf68813e601af2d95dcdb114b0626af7e6d14d09b6431c718bd8d31cdaa8c83e71ca62c67dfc165c2a3c8a6108ce8c_640.jpg"
-    },
-    {
-      "slug": "hong-kong-crypto-betting-payment-shift",
-      "title": "加密貨幣存款取代銀行轉帳：香港博彩用戶支付偏好轉移之成因分析",
-      "category": "undefined",
-      "date": "2026-05-31",
-      "excerpt": "我最近發現身邊好多香港朋友玩網上博彩都轉用加密貨幣，究竟背後有咩原因？真係好奇想知。",
-      "imageUrl": "https://pixabay.com/get/g018e71567cd65939c76fe20d4a5f7209fffb4a0082c7f0ed63e8ae2e1f411d956cf8ea7160e0e23d9d9d377b803f907a03440e93e7cc2bfe42efee1f3bdf4b59_640.jpg"
     }
   ]
 }
