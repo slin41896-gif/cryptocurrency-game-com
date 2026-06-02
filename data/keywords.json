@@ -105,8 +105,10 @@
       "category": "crypto-deposit",
       "angle": "疑問句型",
       "image_theme": "crypto transfer wrong address prevention tips",
-      "status": "available",
-      "writing_style": "操作指南體"
+      "status": "used",
+      "writing_style": "操作指南體",
+      "slug": "crypto-transfer-error-prevention-mechanism",
+      "used_date": "2026-06-02"
     },
     {
       "id": 11,
@@ -114,8 +116,10 @@
       "category": "crypto-deposit",
       "angle": "疑問句型",
       "image_theme": "crypto network fastest transfer speed comparison",
-      "status": "available",
-      "writing_style": "統計分析體"
+      "status": "used",
+      "writing_style": "統計分析體",
+      "slug": "crypto-transfer-speed-gaming-hk",
+      "used_date": "2026-06-02"
     },
     {
       "id": 12,
