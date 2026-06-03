@@ -127,8 +127,10 @@
       "category": "crypto-deposit",
       "angle": "教學攻略型",
       "image_theme": "crypto gambling deposit complete beginner guide 2025",
-      "status": "available",
-      "writing_style": "操作指南體"
+      "status": "used",
+      "writing_style": "操作指南體",
+      "slug": "cryptocurrency-gaming-deposit-safety-2025",
+      "used_date": "2026-06-03"
     },
     {
       "id": 13,
@@ -136,8 +138,10 @@
       "category": "btc-casino",
       "angle": "疑問句型",
       "image_theme": "bitcoin casino selection criteria evaluation",
-      "status": "available",
-      "writing_style": "評測報告體"
+      "status": "used",
+      "writing_style": "評測報告體",
+      "slug": "bitcoin-gaming-platform-review-standards",
+      "used_date": "2026-06-03"
     },
     {
       "id": 14,
@@ -145,8 +149,10 @@
       "category": "btc-casino",
       "angle": "數據比較型",
       "image_theme": "best bitcoin casino 2025 ranking recommended",
-      "status": "available",
-      "writing_style": "評測報告體"
+      "status": "used",
+      "writing_style": "評測報告體",
+      "slug": "bitcoin-gambling-platform-review-2025",
+      "used_date": "2026-06-03"
     },
     {
       "id": 15,
